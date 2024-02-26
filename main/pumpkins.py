@@ -1,7 +1,11 @@
-field = [[1, 3, 2, 4],
+field = [[1, 2, 3, 4],
          [5, 6, 7, 8],
          [9, 10, 11, 12],
          [13, 14, 15, 16]]
+
+
+def reverse_fonk(arr):
+    return arr[::-1]
 
 
 def find_robot_way(arr):
@@ -12,8 +16,8 @@ def find_robot_way(arr):
         if i % 2 == 0:
             robot_way.extend(arr[i])
         else:
-            arr[i].reverse()
-            robot_way.extend(arr[i])
+            reversed_list = reverse_fonk(arr[i])
+            robot_way.extend(reversed_list)
     return robot_way
 
 
